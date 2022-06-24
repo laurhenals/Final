@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LectorController">
+  <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="700.0">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../LectorCalidadAgua/LectorCalidad/src/analisis.png" />
+               </image>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="lbLector" alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="691.0" text="Lector del nivel de la calidad del agua " textFill="#36358c">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #D3D3D3;" VBox.vgrow="ALWAYS">
+      <children>
+            <TabPane prefHeight="335.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tabIngresar" text="Ingresar">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" layoutX="362.0" layoutY="98.0" prefHeight="50.0" prefWidth="86.0" spacing="10.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                              <VBox layoutX="36.0" layoutY="148.0" spacing="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="110.0">
+                                 <children>
+                                    <HBox spacing="5.0">
+                                       <children>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbNombre" text="Nombre de Cuerpo" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfNombre" promptText="Nombre">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbId" text="ID" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfId" promptText="ID">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbMunicipio" text="Municipio" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfMunicipio" promptText="Municipio">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="43.0" prefWidth="443.0" spacing="5.0">
+                                       <children>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbTipoCuerpo" text="Tipo de Cuerpo" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfTipoCuerpo" promptText="Tipo de Cuerpo">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbTipoAgua" text="Tipo de Agua" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfTipoAgua" promptText="Tipo de Agua">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbIrca" text="IRCA" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfIrca" promptText="IRCA">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="326.0" layoutY="10.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbHabitantes" text="Habitantes" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfHabitantes" promptText="Habitantes">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="bIngresar" layoutX="555.0" layoutY="194.0" mnemonicParsing="false" onAction="#AccionIngresar" prefHeight="25.0" prefWidth="80.0" text="Ingresar" textAlignment="CENTER" textFill="#181570">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="-64.0" layoutY="37.0" text="Ingrese los datos solicitados a continuación" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="35.0">
+                                 <font>
+                                    <Font name="Century Gothic Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btPoblacion" layoutX="555.0" layoutY="242.0" mnemonicParsing="false" onAction="#AccionDensidad" text="D Poblacional" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="tabProcesar" text="Procesar">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="486.0" layoutY="31.0" prefHeight="250.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0">
+                                 <children>
+                                    <Label prefHeight="10.0" text="Cuerpo de Agua + Id" textFill="#2a722d">
+                                       <font>
+                                          <Font name="Century Gothic Bold Italic" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="tfSalidas" editable="false" prefHeight="140.0" prefWidth="195.0">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Century Gothic" size="12.0" />
+                                       </font>
+                                    </TextArea>
+                                    <Label prefHeight="10.0" text="# Cuerpos con nivel de riesgo" textFill="#2a722d" wrapText="true">
+                                       <font>
+                                          <Font name="Century Gothic Bold Italic" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="178.0" prefHeight="10.0" text="ALTO e INVIABLEMENTE SANITARIO" textFill="#2a722d">
+                                       <font>
+                                          <Font name="Century Gothic Bold Italic" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfSalidas1" editable="false" prefHeight="30.0" prefWidth="250.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="10.0" layoutY="166.0" prefHeight="10.0" text="Municipios con riesgo ALTO" textFill="#2a722d">
+                                       <font>
+                                          <Font name="Century Gothic Bold Italic" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfSalidas2" editable="false" prefHeight="30.0" prefWidth="250.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="10.0" layoutY="209.0" prefHeight="10.0" text="Nivel de riesgo más bajo" textFill="#2a722d">
+                                       <font>
+                                          <Font name="Century Gothic Bold Italic" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfSalidas3" editable="false" prefHeight="30.0" prefWidth="250.0">
+                                       <font>
+                                          <Font name="Century Gothic" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="bProcesar" layoutX="546.0" layoutY="2.0" mnemonicParsing="false" onAction="#AccionProcesar" prefHeight="25.0" prefWidth="80.0" text="Procesar" textAlignment="CENTER" textFill="#2a722d">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextArea fx:id="tfIngresos" editable="false" layoutX="24.0" layoutY="51.0" prefHeight="150.0" prefWidth="428.0">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </TextArea>
+                              <Label layoutX="24.0" layoutY="29.0" text="Datos ingresados" textFill="#141414">
+                                 <font>
+                                    <Font name="Century Gothic Bold Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="467.0" layoutY="-25.0" orientation="VERTICAL" prefHeight="335.0" prefWidth="6.0" AnchorPane.rightAnchor="230.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabEditarEliminar" text="Editar/Eliminar">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="25.0" layoutY="69.0" spacing="10.0">
+                                 <children>
+                                    <Label fx:id="lbIdBusqueda" text="ID" textFill="#090cd7">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfIdBusqueda" prefHeight="23.0" prefWidth="45.0" promptText="ID">
+                                       <font>
+                                          <Font name="Century Gothic" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="btBuscar" mnemonicParsing="false" onAction="#AccionBuscar" prefWidth="80.0" text="Buscar" textFill="#090cd7">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="507.0" layoutY="220.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btEditar" mnemonicParsing="false" onAction="#AccionEditar" prefWidth="80.0" text="Editar">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btEliminar" mnemonicParsing="false" onAction="#AccionEliminar" prefWidth="80.0" text="Eliminar" textFill="#e80c0c">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="25.0" layoutY="112.0" spacing="10.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="110.0">
+                                 <children>
+                                    <HBox spacing="5.0">
+                                       <children>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbNombre1" text="Nombre de Cuerpo" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfNombre1" promptText="Nombre">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbId1" text="ID" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfId1" editable="false" promptText="ID">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbMunicipio1" text="Municipio" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfMunicipio1" promptText="Municipio">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="5.0">
+                                       <children>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbTipoCuerpo1" text="Tipo de Cuerpo" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfTipoCuerpo1" promptText="Tipo de Cuerpo">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbTipoAgua1" text="Tipo de Agua" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfTipoAgua1" promptText="Tipo de Agua">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbIrca1" text="IRCA" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfIrca1" promptText="IRCA">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="326.0" layoutY="10.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="lbHabitantes1" text="Habitantes" textFill="#141414">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="tfHabitantes1" promptText="Habitantes">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Label layoutX="25.0" layoutY="35.0" text="Ingrese el número de identificación del cuerpo de agua que desea editar o eliminar" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="35.0">
+                                 <font>
+                                    <Font name="Century Gothic Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
